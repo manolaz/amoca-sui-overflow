@@ -1,134 +1,108 @@
-# Sui dApp Starter - Easy-to-Use Full-Stack Sui Starter
-[![Build and Lint (frontend)](https://github.com/suiware/sui-dapp-starter/actions/workflows/build_and_lint.yaml/badge.svg)](https://github.com/suiware/sui-dapp-starter/actions/workflows/build_and_lint.yaml)
-[![Discord chat](https://img.shields.io/discord/1237259509366521866.svg?logo=discord&style=flat-square)](https://discord.com/invite/HuDPpXz4Hx)
+# AMOCA - Information Flow for Sui Move/Rust Programs
 
-![Spoiler](https://repository-images.githubusercontent.com/794883099/f0937c6b-c021-41db-b44a-a287b29111c3)
+## Introduction
 
-[Won the 1st place in the Randomness category of the Sui Overflow 2024 hackathon](https://blog.sui.io/2024-sui-overflow-hackathon-winners/)
+AMOCA is a comprehensive toolkit designed for analyzing, visualizing, and securing Sui Move and Rust programs. It leverages information flow analysis to provide developers with powerful insights into their code, helping to identify potential security vulnerabilities and optimize program structure.
 
-## Motivation
+## Key Features
 
-Most of the Sui starters I found were either very basic or one-sided (frontend or backend). Thanks to my experience with various full-stack starters and templates, I knew how to do better, so I started this template with the goal of providing all basic tools and components for you to focus on your business logic from day one and not spend weeks on creating your app skeleton. // [@kkomelin](https://github.com/kkomelin)
+### Analysis and Visualization
 
-## Features
+- **Call Graph Visualization**: Interactive diagrams showing the relationships between functions and modules in your Move/Rust code
+- **Data Flow Analysis**: Track how information moves through your smart contracts
+- **Dependency Mapping**: Visual representation of module dependencies and interactions
 
-- **[Suibase](https://suibase.io/)**: Painless work with the networks and system dependencies
-- **[Local Sui Explorer](https://github.com/suiware/sui-explorer)**: Browse your transactions and objects locally
-- **pnpm**: More efficient package management for monorepos
-- **TypeScript**: Less error-prone JavaScript
-- **React or Next.js**: Choose a template with a framework of your choice
-- **Tailwind CSS**: Utility-first CSS for more efficient styling
-- **Vite + SWC**: Faster app bundling and optimizing
-- **Radix UI**: Accessible React components to prototype quicker 
-- **Sui dApp Kit**: All you need to work with Sui network on frontend
-- **[@suiware/kit](https://www.npmjs.com/package/@suiware/kit)**: Useful react primitives, such as useTransact, useNetworkType, NetworkType, useBalance, Balance, useFaucet, Faucet and more
-- **Frontend Deployment**: [Firebase](https://sui-dapp-starter.dev/docs/frontend/deployment/firebase), [Walrus Sites](https://sui-dapp-starter.dev/docs/frontend/deployment/walrus), [Arweave](https://sui-dapp-starter.dev/docs/frontend/deployment/arweave)
-- **One-liner Install**: Just `pnpm create sui-dapp@latest`
-- **[Demo app](https://demo.sui-dapp-starter.dev/)**: Default Greeting (React) template
+### Security Features
 
-## Prerequisites
+- **Vulnerability Detection**: Identify common security issues including:
+  - Reentrancy vulnerabilities
+  - Integer overflow/underflow
+  - Authorization bypasses
+  - Resource leakage
+- **Security Audit Reports**: Comprehensive documentation of potential security concerns
+- **Best Practice Recommendations**: Suggestions for improving code security based on established patterns
 
-Before you begin, install the following:
+### Move Program Translation
 
-- [Suibase](https://suibase.io/how-to/install.html)
-- [Node (>= 20)](https://nodejs.org/en/download/)
-- [pnpm (>= 9)](https://pnpm.io/installation)
+- **Move to Rust Translation**: Convert Move programs to equivalent Rust implementations
+- **Cross-language Interoperability**: Streamline interactions between Move and Rust components
+- **Migration Assistance**: Tools to help port existing code to the Sui ecosystem
 
-## Installation
+### Generative Features
 
-### Option 1. Use the Github template
+- **Code Expansion Suggestions**: AI-powered recommendations for extending functionality
+- **Template Generation**: Scaffolding for common Sui design patterns
+- **Feature Enhancement**: Intelligent suggestions for optimizing existing code
 
-1. [Create a new project from the template](https://github.com/new?template_name=sui-dapp-starter&template_owner=suiware&name=my-sui-dapp).
+## Getting Started
 
-2. Clone the resulting repo locally.
+### Prerequisites
 
-3. Choose a template by running the corresponding init command:
+- Rust (version 1.60+)
+- Sui CLI (version 1.0+)
+- Node.js (version 16+) for the visualization components
 
-| Template | Init command |
-| --- | --- |
-| Greeting (React) | `pnpm init:template:greeting-react` |
-| Greeting (Next.js) | `pnpm init:template:greeting-next` |
-| Counter (React) | `pnpm init:template:counter-react` |
-
-[Template Guide](https://sui-dapp-starter.dev/docs/templates)
-
-### Option 2. Use CLI
+### Installation
 
 ```bash
-pnpm create sui-dapp@latest
+# Clone the repository
+git clone https://github.com/yourusername/amoca-sui-overflow.git
+cd amoca-sui-overflow
+
+# Install dependencies
+cargo build --release
+
+# Install web interface dependencies
+cd web
+npm install
 ```
 
-This way you'll be able to configure the project step-by-step.
-
-## Usage
-
-#### 1. Run the local Sui network:
+### Basic Usage
 
 ```bash
-pnpm localnet:start
+# Analyze a Move project
+amoca analyze --path /path/to/move/project
+
+# Generate a security report
+amoca security --path /path/to/move/project --output security-report.json
+
+# Visualize call graph
+amoca visualize --path /path/to/move/project --open
 ```
 
-Local Sui Explorer will be available on [localhost:9001](http://localhost:9001/)
+## Documentation
 
-#### 2. Deploy the demo contract to the local network:
+For comprehensive documentation, visit our [Documentation Site](https://amoca.xyz).
 
-```bash
-pnpm localnet:deploy
-```
+- [API Reference](https://amoca.xyz/api)
+- [User Guide](https://amoca.xyz/guide)
+- [Examples](https://amoca.xyz/examples)
+- [FAQ](https://amoca.xyz/faq)
 
-_This command skips dependency verifications to prevent dependency version mismatch issues, which are caused by local and remote Sui version mismatch. The deploy commands for devnet, testnet and mainnet do perform such verifications._
+## Contributing
 
-#### 3. Switch to the local network in your browser wallet settings.
+We welcome contributions to AMOCA! Please follow these steps:
 
-#### 4. Fund your localnet account/address:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-You have a few options here:
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and development process.
 
-a) Use the Faucet button integrated into your wallet (e.g. Sui Wallet).
+## License
 
-b) Copy the localnet address from your wallet and run the following in your console:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```bash
-pnpm localnet:faucet 0xYOURADDRESS
-```
+## Contact
 
-c) Run the app and use the Faucet button in the footer.
+- Project Team: [team@amoca.io](mailto:team@amoca.io)
+- Twitter: [@amoca_io](https://twitter.com/amoca_io)
+- Discord: [AMOCA Community](https://discord.gg/amoca)
 
-#### 5. Run the app:
+## Acknowledgements
 
-```bash
-pnpm start
-```
-Find all commands in the [documentation](https://sui-dapp-starter.dev/docs/misc/commands/).
-
-## Test
-
-#### Backend
-
-```bash
-pnpm test
-```
-
-## Docs & Support
-
-- [Sui dApp Starter Docs](https://sui-dapp-starter.dev/docs)
-- [Available PNPM Commands](https://sui-dapp-starter.dev/docs/misc/commands/)
-- [@suiware/kit Docs](https://www.npmjs.com/package/@suiware/kit)
-- [Discord Support](https://discord.com/invite/HuDPpXz4Hx)  
-
-## Useful Links
-
-- [Useful VSCode Extensions](./.vscode/extensions.json)
-- [Suibase Docs](https://suibase.io/intro.html)
-- [Move Book](https://move-book.com/)
-- [Sui Move: Code Conventions](https://docs.sui.io/concepts/sui-move-concepts/conventions)
-- [@mysten/create-dapp - official starter](https://www.npmjs.com/package/@mysten/create-dapp)
-- [Awesome Sui](https://github.com/sui-foundation/awesome-sui)
-
-## License & Copyright
-
-Copyright (c) 2024 Konstantin Komelin and other contributors
-
-Code is licensed under [MIT](https://github.com/suiware/sui-dapp-starter?tab=MIT-1-ov-file)
-
-SVG Graphics used for NFTs is licensed under [CC-BY 4.0](https://github.com/suiware/sui-dapp-starter?tab=CC-BY-4.0-2-ov-file)
+- Sui Foundation
+- Move Language Team
+- All contributors who have helped shape AMOCA
