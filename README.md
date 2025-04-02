@@ -26,6 +26,63 @@ This project is our submission for the Sui Overflow Hackathon. We've built a dec
 - **Impact Verification Oracles**: Integration with real-world data sources for verification
 - **Cross-chain Interoperability**: Bridge with Solana for expanded liquidity options
 
+## 📊 Workflow Diagrams
+
+### Project Submission and Funding Flow
+
+```mermaid
+flowchart TD
+    A[Project Creator] -->|Submits Project| B[Project Registry]
+    B -->|Verification Request| C[Expert Verification]
+    C -->|Approved| D[Published to Marketplace]
+    D -->|Viewed| E[Investors]
+    E -->|Fund Project| F[Smart Contract Escrow]
+    F -->|Release Funds by Milestone| G[Project Implementation]
+    G -->|Report Results| H[Impact Verification]
+    H -->|Verified Impact| I[Impact Tokens Generated]
+    I -->|Distributed to| E
+    I -->|Partial Revenue to| A
+```
+
+### Impact Verification Process
+
+```mermaid
+sequenceDiagram
+    participant PC as Project Creator
+    participant SC as Smart Contract
+    participant OR as Oracle Network
+    participant VN as Verification Node
+    participant IN as Investor
+
+    PC->>SC: Submit Impact Report
+    SC->>OR: Request Data Verification
+    OR->>VN: Forward to Verification Nodes
+    VN-->>OR: Return Verification Results
+    OR-->>SC: Provide Consensus Result
+    SC->>SC: Calculate Impact Score
+    SC->>IN: Issue Impact Certificates
+    SC->>PC: Release Performance-Based Funds
+```
+
+### DAO Governance Framework
+
+```mermaid
+stateDiagram-v2
+    [*] --> ProposalSubmission
+    ProposalSubmission --> Review: Submit
+    Review --> Voting: Pass Initial Review
+    Review --> Rejected: Fail Initial Review
+    Voting --> Approved: Reach Quorum & Majority
+    Voting --> Rejected: Fail to Reach Support
+    Approved --> Implementation
+    Implementation --> Monitoring
+    Monitoring --> Completed: Goals Achieved
+    Monitoring --> Adjustment: Performance Review
+    Adjustment --> Implementation
+    Completed --> [*]
+    Rejected --> [*]
+```
+
 ## 🛠️ Technology Stack
 
 - **Blockchain**: Sui Move for smart contracts
@@ -49,7 +106,7 @@ Our Move contracts implement:
 ### Prerequisites
 
 - Sui CLI and SDK
-- Node.js (v16+)
+- Node.js (v23+)
 - pnpm
 
 ### Installation
@@ -87,7 +144,6 @@ pnpm start
 - Integration with carbon credit marketplaces
 - Mobile application for field reporting
 - Expanded oracle networks for diversified verification
-- Layer 2 scaling solutions for higher throughput
 
 ## 👥 Team
 
