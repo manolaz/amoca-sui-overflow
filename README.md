@@ -1,116 +1,109 @@
-# AMOCA:Autonomous Merit-based On-chain Credential Attestation
+# AMOCA: Alliance Modeling Of Climate Action Finance
 
-Blockchain-Based Reputation System
+**Harnessing the Sui ecosystem to revolutionize climate finance and accelerate global sustainability.**
 
-AMOCA implements an on-chain user reputation system similar to LinkedIn on the blockchain, leveraging the capabilities of both Sui and Solana networks to create a transparent, verifiable professional identity platform focused on sustainability initiatives.
+Climate change demands urgent action, but financial barriers often impede progress. AMOCA bridges this gap by creating a decentralized alliance where capital meets innovation. Built on the Sui blockchain, our platform transforms how climate initiatives are funded, tracked, and scaled.
 
-## 🌟 Overview
+AMOCA (Alliance Modeling Of Climate Action Finance) unites governments, international organizations, private investors, and climate innovators in a transparent ecosystem powered by Web3 technology. Our platform enables:
 
-AMOCA creates a decentralized professional reputation network that enables users to:
+- **Data-Driven Decision Making**: Advanced modeling of climate initiatives from renewable energy to sustainable agriculture, providing clear insights into project feasibility and impact metrics
+- **Decentralized Funding Mechanisms**: Streamlined investment flows with verifiable accountability through Sui's powerful object model
+- **Global Accessibility**: Democratized access to climate financing for developing nations and grassroots innovators
+- **Transparent Impact Tracking**: Real-time monitoring of project outcomes with blockchain-verified reporting
 
-- Build verifiable on-chain professional profiles
-- Receive endorsements and verifications from peers
-- Earn reputation scores and achievement badges
-- Participate in sustainability-focused DAO governance
-- Connect with qualified partners for green business initiatives
+By leveraging Sui's secure, scalable infrastructure, AMOCA transforms climate action from aspiration to implementation—creating a financially sustainable path toward a climate-resilient future.
 
-## 🔍 Core Concepts
+## 🚀 Sui Overflow Hackathon Submission
 
-### User Profile Objects
+This project is our submission for the Sui Overflow Hackathon. We've built a decentralized application on the Sui blockchain to revolutionize climate finance through transparent, efficient, and collaborative solutions.
 
-Each AMOCA user has a dedicated profile object stored on-chain containing verifiable professional information.
+## 💡 Key Features
 
-### Claim-Based System
+- **Climate Project Marketplace**: Browse, submit, and fund climate action projects
+- **Impact Tokenization**: Convert climate impact into tradable assets using Sui's object model
+- **DAO Governance**: Decentralized decision-making for project approvals and fund allocation
+- **Multi-party Escrow System**: Secure and transparent funding mechanisms
+- **Impact Verification Oracles**: Integration with real-world data sources for verification
+- **Cross-chain Interoperability**: Bridge with Solana for expanded liquidity options
 
-Users make claims about their:
+## 🛠️ Technology Stack
 
-- Skills and expertise
-- Professional experience
-- Educational background
-- Project involvement
-- Contributions to sustainability efforts
+- **Blockchain**: Sui Move for smart contracts
+- **Frontend**: React with TypeScript
+- **Backend**: Sui RPC nodes and custom API services
+- **Data Storage**: On-chain state and IPFS for larger documents
+- **Analytics**: TensorFlow models for climate impact prediction
 
-### Verification and Endorsements
+## 📋 Smart Contract Architecture
 
-- Peers and designated authorities can verify claims
-- All endorsements are recorded on-chain
-- Verification history is transparent and immutable
+Our Move contracts implement:
 
-### Reputation Scores and Badges
+- Project Registry with ownership and funding tracking
+- Token standards for impact certification
+- Multi-signature approval workflows
+- DAO voting mechanisms
+- Oracle integration frameworks
 
-- Algorithmic scoring based on verifications and contributions
-- NFT badges representing expertise and achievements
-- Visual indicators of credibility and specialization
+## 🏁 Getting Started
 
-## 💻 Technical Implementation
+### Prerequisites
 
-### Sui Network Implementation
+- Sui CLI and SDK
+- Node.js (v16+)
+- pnpm
 
-```move
-// Example UserProfile struct in Move language
-struct UserProfile has key, store {
-    id: UID,
-    user_address: address,
-    skills: vector<Skill>,
-    experience: vector<Experience>,
-    education: vector<Education>,
-    contributions: vector<Contribution>,
-    reputation_score: u64,
-    badges: vector<Badge>
-}
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/manolaz/amoca-sui-overflow.git
+cd amoca-sui-overflow
+
+# Install dependencies
+pnpm install
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your configuration
+
+# Build Move modules
+sui move build
+
+# Start the application
+pnpm start
 ```
 
-Key components:
+## 🔄 Usage Flow
 
-- User Profile Move Objects for storing identity data
-- Verification Smart Contracts for claim validation
-- Endorsement Functionality with on-chain record keeping
-- Reputation Calculation Logic based on verified activities
-- Badge Issuance through NFT mechanisms
+1. **Project Submission**: Climate initiatives submit project details, funding requirements, and impact metrics
+2. **Verification**: Experts and oracles verify project feasibility and impact calculations
+3. **Funding**: Investors browse projects and allocate funds through smart contracts
+4. **Execution & Monitoring**: Track progress and milestone completion on-chain
+5. **Impact Certification**: Generate and distribute impact tokens upon verified outcomes
 
-### Solana Network Implementation
+## 🔮 Future Roadmap
 
-- User Profile Accounts for identity storage
-- Verification Programs (smart contracts) for claim validation
-- SPL Token program integration for badge minting
-- Cross-chain communication with Sui network
+- Advanced impact simulation models
+- Integration with carbon credit marketplaces
+- Mobile application for field reporting
+- Expanded oracle networks for diversified verification
+- Layer 2 scaling solutions for higher throughput
 
-## 🏛️ Integration with AMOCA DAO
+## 👥 Team
 
-The reputation system is tightly integrated with governance:
+- [Tristan] - Smart Contract Developer
+- [Tristan] - Frontend Engineer
+- [Tristan] - Climate Finance Expert
+- [Tristan] - Project Manager
 
-- **Voting Power**: Reputation influences governance weight
-- **Opportunity Access**: Qualified individuals gain access to projects
-- **Mentorship Roles**: High-reputation users can mentor new green businesses
-- **Dispute Resolution**: Reputation considered in community arbitration
+## 🏆 Hackathon Experience
 
-## 👥 User Experience
-
-The AMOCA platform interface:
-
-- Displays comprehensive user profiles with verified credentials
-- Shows reputation scores and earned badges
-- Enables exploration of community member qualifications
-- Facilitates connections between complementary skill sets
-
-## 🔒 Privacy Considerations
-
-- User control over public profile information
-- Clear guidelines for verification processes
-- Options for pseudonymous or identified participation
-
-## 🚀 Getting Started
-
-[Coming soon: Installation and setup instructions]
-
-## 🤝 Contributing
-
-[Coming soon: Contribution guidelines]
+Building AMOCA during the Sui Overflow Hackathon has been an incredible journey. We encountered challenges particularly in designing the optimal object model for our climate projects and implementing secure multi-party funding mechanisms. The Sui framework's unique approach to object ownership helped us create innovative solutions for tracking project ownership and funding lifecycles.
 
 ## 📄 License
 
-[Coming soon: License information]
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Contact
+## 🤝 Contributing
 
-[Coming soon: Contact information]
+We welcome contributions! Please see CONTRIBUTING.md for details on how to get started.
