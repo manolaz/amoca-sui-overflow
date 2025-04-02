@@ -138,6 +138,26 @@ pnpm start
 4. **Execution & Monitoring**: Track progress and milestone completion on-chain
 5. **Impact Certification**: Generate and distribute impact tokens upon verified outcomes
 
+## 🌍 UN Sustainable Development Goals
+
+AMOCA's mission and functionality directly support several key United Nations Sustainable Development Goals:
+
+### SDG 13: Climate Action
+
+Our core mission directly aligns with taking urgent action to combat climate change and its impacts. AMOCA's platform revolutionizes climate finance and accelerates global sustainability by providing innovative funding mechanisms for climate initiatives.
+
+### SDG 17: Partnerships for the Goals
+
+AMOCA emphasizes uniting governments, international organizations, private investors, and climate innovators in a decentralized alliance. This collaborative approach across different sectors is central to achieving sustainable development globally.
+
+### SDG 7: Affordable and Clean Energy
+
+Through our platform, AMOCA supports renewable energy projects that contribute directly to the goal of ensuring access to affordable, reliable, sustainable, and modern energy for all.
+
+### SDG 9: Industry, Innovation and Infrastructure
+
+By leveraging blockchain technology (Sui ecosystem) and advanced modeling for climate initiatives, AMOCA promotes innovation and contributes to building resilient infrastructure for climate action.
+
 ## 🔮 Future Roadmap
 
 - Advanced impact simulation models
