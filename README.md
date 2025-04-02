@@ -1,4 +1,6 @@
-# AMOCA: Blockchain-Based Reputation System
+# AMOCA:Autonomous Merit-based On-chain Credential Attestation
+
+Blockchain-Based Reputation System
 
 AMOCA implements an on-chain user reputation system similar to LinkedIn on the blockchain, leveraging the capabilities of both Sui and Solana networks to create a transparent, verifiable professional identity platform focused on sustainability initiatives.
 
