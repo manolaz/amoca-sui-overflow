@@ -1,0 +1,18 @@
+[package]
+name = "amoca"
+version = "0.1.0"
+
+[dependencies.Switchboard]
+git = "https://github.com/switchboard-xyz/sui.git"
+subdir = "on_demand/"
+rev = "mainnet" # Use "testnet" for testnet deployment
+
+[dependencies.Sui]
+git = "https://github.com/MystenLabs/sui.git"
+subdir = "crates/sui-framework/packages/sui-framework"
+rev = "framework/mainnet" # Use "framework/testnet" for testnet deployment
+
+[addresses]
+amoca = "0x0"
+switchboard = "0xe6717fb7c9d44706bf8ce8a651e25c0a7902d32cb0ff40c0976251ce8ac25655" # Mainnet address
+# switchboard = "0x578b91ec9dcc505439b2f0ec761c23ad2c533a1c23b0467f6c4ae3d9686709f6" # Testnet address
